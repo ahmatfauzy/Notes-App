@@ -70,8 +70,8 @@ textarea {
   box-sizing: border-box;
   transition: border-color 0.3s;
   overflow: hidden;
-  text-overflow: ellipsis; 
-  white-space: nowrap; 
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 input:focus,
@@ -84,7 +84,7 @@ textarea {
   resize: vertical;
   overflow: auto;
   height: 150px;
-  white-space: normal; 
+  white-space: normal;
 }
 
 button {
