@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start-dev": "webpack serve --mode development",
-    "build": "webpack --mode production",
+    "build": "npx webpack --mode production",
     "prettier": "prettier --write \"src/**/*.js\""
   },
   "keywords": [],
