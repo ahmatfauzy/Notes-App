@@ -2,7 +2,7 @@
 
 ## Deskripsi
 
-Ini adalah submission pertama untuk Intermediate Frontend pada program DBS x Dicoding.
+Ini adalah submission untuk Intermediate Frontend pada program DBS x Dicoding.
 
 ## Perintah
 Submission 1:
