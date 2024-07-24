@@ -1,0 +1,156 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+app-bar {
+  background-color: #6200ea;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 5rem 2rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px;
+}
+
+note-form {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input,
+textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #6200ea;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  overflow: auto;
+  height: 150px;
+  white-space: normal;
+}
+
+button {
+  background-color: #6200ea;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:not(:disabled):hover {
+  background-color: #4500b5;
+  transform: translateY(-2px);
+}
+
+note-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+note-item {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+note-item h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+note-item p {
+  font-size: 1rem;
+  color: #666;
+  flex-grow: 1;
+  word-break: break-word;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 5rem 1rem 1rem;
+  }
+
+  note-item {
+    padding: 0.75rem;
+  }
+
+  input,
+  textarea,
+  button {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+}
